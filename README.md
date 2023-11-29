@@ -12,12 +12,13 @@ This repository contains the code for Assignment 1 of the CSE2100 course. It's a
 
 ## Screenshots
 
-![Screenshot 1](screenshots/ss1.png)
-![Screenshot 2](screenshots/ss2.png)
+<div style="display: flex; justify-content: space-between;">
+  <img src="screenshots/ss1.png" alt="Screenshot 1" width="300">
+  <img src="screenshots/appgif.gif" alt="Demo" width="300">
+ 
+  
+</div>
 
-## Demo
-
-![App Demo](screenshots/appgif.gif)
 
 ## Acknowledgements
 
