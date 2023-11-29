@@ -26,7 +26,7 @@ class _BuyNowPageState extends State<BuyNowPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Buy Now'),
+        title: Text('Book Details & Checkout'),
       ),
       body: Center(
         child: Padding(
@@ -51,7 +51,7 @@ class _BuyNowPageState extends State<BuyNowPage> {
               ),
               SizedBox(height: 20),
               Image.asset(
-                'assets/highres_images/${widget.bookName.toLowerCase().replaceAll(' ', '_')}.webp',
+                'assets/highres_images/${widget.bookName.toLowerCase().replaceAll(' ', '_')}.jpg',
                 height: 200,
                 width: 150,
                 fit: BoxFit.cover,
@@ -110,7 +110,7 @@ class _BuyNowPageState extends State<BuyNowPage> {
                 ],
               ),
               SizedBox(height: 13),
-              ElevatedButton(
+              ElevatedButton.icon(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -119,14 +119,24 @@ class _BuyNowPageState extends State<BuyNowPage> {
                     ),
                   );
                 },
-                child: Text('Proceed to Payment'),
+                icon: Icon(Icons.payment),
+                label: Text('Proceed to Secure Payment'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightGreen.shade700,
+                  //textStyle: TextStyle(fontSize: 18),
+                ),
               ),
               SizedBox(height: 10),
-              ElevatedButton(
+              ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('Go Back'),
+                icon: Icon(Icons.arrow_back),
+                label: Text('Go Back'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey.shade700,
+                  //textStyle: TextStyle(fontSize: 18),
+                ),
               ),
             ],
           ),

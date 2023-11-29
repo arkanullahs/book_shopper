@@ -30,49 +30,56 @@ class BookListPage extends StatelessWidget {
       bookName: 'The Great Gatsby',
       authorName: 'F. Scott Fitzgerald',
       rating: '3.93',
-      description: 'Set in the Jazz Age, it delves into the American Dream and its disillusionment.',
+      description:
+          'Set in the Jazz Age, it delves into the American Dream and its disillusionment.',
       price: '\$10.49',
     ),
     BookDetails(
       bookName: 'The Catcher in the Rye',
       authorName: 'J.D. Salinger',
       rating: '3.81',
-      description: 'Follows a teenager’s journey through alienation and rebellion.',
+      description:
+          'Follows a teenager’s journey through alienation and rebellion.',
       price: '\$9.99',
     ),
     BookDetails(
       bookName: 'পথের পাঁচালী',
       authorName: 'বিভূতিভূষণ বন্দ্যোপাধ্যায়',
       rating: '৪.২৭',
-      description: 'রূরল লাইফ এবং প্রত্যাশার বিষয়টি ধরা ক্যাচ করা একটি ক্লাসিক বাংলা উপন্যাস।',
+      description:
+          'রূরল লাইফ এবং প্রত্যাশার বিষয়টি ধরা ক্যাচ করা একটি ক্লাসিক বাংলা উপন্যাস।',
       price: '৳300',
     ),
     BookDetails(
       bookName: 'The Lord of the Rings',
       authorName: 'J.R.R. Tolkien',
       rating: '4.5',
-      description: 'Epic fantasy adventure exploring themes of power and friendship.',
+      description:
+          'Epic fantasy adventure exploring themes of power and friendship.',
       price: '\$19.99',
     ),
     BookDetails(
       bookName: 'To the Lighthouse',
       authorName: 'Virginia Woolf',
       rating: '3.8',
-      description: 'A narrative exploring the complexities of human relationships.',
+      description:
+          'A narrative exploring the complexities of human relationships.',
       price: '\$8.95',
     ),
     BookDetails(
       bookName: 'Brave New World',
       authorName: 'Aldous Huxley',
       rating: '3.98',
-      description: 'Dystopian novel questioning societal norms and technological advancement.',
+      description:
+          'Dystopian novel questioning societal norms and technological advancement.',
       price: '\$11.00',
     ),
     BookDetails(
       bookName: 'ফেলুদা সিরিজ',
       authorName: 'সত্যজিৎ রায়',
       rating: '৪.১৮',
-      description: 'প্রিয় বাংলা স্লুথ ফেলুদার ফেলুদা সিরিজের এক ধারাবাহিক গল্প।',
+      description:
+          'প্রিয় বাংলা স্লুথ ফেলুদার ফেলুদা সিরিজের এক ধারাবাহিক গল্প।',
       price: '৳180',
     ),
   ];
@@ -81,7 +88,7 @@ class BookListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Book List'),
+        title: Text('BookShopper'),
       ),
       body: ListView.builder(
         padding: EdgeInsets.all(16.0),
@@ -102,15 +109,15 @@ class BookListPage extends StatelessWidget {
   }
 
   Widget _buildBookCard(
-      String bookName,
-      String authorName,
-      String rating,
-      String description,
-      String price,
-      BuildContext context,
-      ) {
+    String bookName,
+    String authorName,
+    String rating,
+    String description,
+    String price,
+    BuildContext context,
+  ) {
     String imagePath =
-        'assets/lowres_images/${bookName.toLowerCase().replaceAll(' ', '_')}.webp';
+        'assets/lowres_images/${bookName.toLowerCase().replaceAll(' ', '_')}.jpeg';
 
     return Card(
       elevation: 4.0,
@@ -120,7 +127,7 @@ class BookListPage extends StatelessWidget {
           imagePath,
           height: 56.0,
           width: 56.0,
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
         ),
         title: Text(bookName),
         subtitle: Column(
@@ -145,7 +152,7 @@ class BookListPage extends StatelessWidget {
               ),
             );
           },
-          icon: Icon(Icons.shopping_cart),
+          icon: Icon(Icons.add_shopping_cart_rounded),
           label: Text('Buy Now'),
         ),
       ),
