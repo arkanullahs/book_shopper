@@ -109,11 +109,19 @@ class BookListPage extends StatelessWidget {
       String price,
       BuildContext context,
       ) {
+    String imagePath =
+        'assets/lowres_images/${bookName.toLowerCase().replaceAll(' ', '_')}.webp';
+
     return Card(
       elevation: 4.0,
       margin: const EdgeInsets.only(bottom: 16.0),
       child: ListTile(
-        leading: FlutterLogo(size: 56.0),
+        leading: Image.asset(
+          imagePath,
+          height: 56.0,
+          width: 56.0,
+          fit: BoxFit.cover,
+        ),
         title: Text(bookName),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,7 +132,6 @@ class BookListPage extends StatelessWidget {
         ),
         trailing: ElevatedButton.icon(
           onPressed: () {
-            // Navigate to BuyNowPage with all necessary details
             Navigator.push(
               context,
               MaterialPageRoute(
