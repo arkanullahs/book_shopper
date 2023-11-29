@@ -50,12 +50,17 @@ class _BuyNowPageState extends State<BuyNowPage> {
                 ),
               ),
               SizedBox(height: 20),
-              FlutterLogo(size: 100),
+              Image.asset(
+                'assets/highres_images/${widget.bookName.toLowerCase().replaceAll(' ', '_')}.webp',
+                height: 200,
+                width: 150,
+                fit: BoxFit.cover,
+              ),
               SizedBox(height: 20),
               Container(
                 padding: EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.blueGrey[50],
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Text(
@@ -63,21 +68,22 @@ class _BuyNowPageState extends State<BuyNowPage> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16.0,
+                    fontWeight: FontWeight.w500,
                     color: Colors.grey[800],
                   ),
                 ),
               ),
-              SizedBox(height: 12.0),
+              SizedBox(height: 25.0),
               Text(
                 widget.price,
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent,
+                  color: Colors.green,
                   letterSpacing: 1.2,
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 18),
               DropdownButton<String>(
                 onChanged: (String? value) {
                   if (value != null && value != 'Select an option') {
@@ -103,7 +109,7 @@ class _BuyNowPageState extends State<BuyNowPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 13),
               ElevatedButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
