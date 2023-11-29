@@ -1,16 +1,26 @@
-# cse2100_assignment_1
+# CSE2100 Assignment 1
 
-Assignment 1 for CSE2100 Course.
+This project is part of CSE2100, showcasing a book catalog app built using Flutter.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- View a list of books with details like author, ratings, and descriptions.
+- Navigate to a detailed view for each book to see high-resolution images and book details.
+- Select delivery options and proceed to payment (feature coming soon).
+- Enjoy a user-friendly interface to browse through your favorite books.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screenshot 1](screenshot1.png)
+![Screenshot 2](screenshot2.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Demo
+
+![App Demo](app_demo.gif)
+
+## Installation
+
+To run this project, ensure you have Flutter installed. Clone the repository and run the following command:
+
+```bash
+flutter run
