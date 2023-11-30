@@ -89,6 +89,7 @@ class _BuyNowPageState extends State<BuyNowPage> {
                   if (value != null && value != 'Select an option') {
                     setState(() {
                       selectedOption = value;
+                      print(selectedOption);
                     });
                   }
                 },
